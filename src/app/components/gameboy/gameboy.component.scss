@@ -1,0 +1,126 @@
+.gameboy {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(calc(50% - 300px));
+  width: 422px;
+  height: 697px;
+  background: #eee;
+  border-radius: 10px 10px 60px 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+
+  .screen {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    width: 342px;
+    height: 272px;
+    margin-bottom: 58px;
+    background-color: #777;
+    border-radius: 13px 13px 50px 13px;
+
+    .inner-screen {
+      overflow: hidden;
+      position: relative;
+      top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #bdae58;
+      width: 225px;
+      height: 205px;
+      box-shadow: inset 3px 3px rgba(0, 0, 0, 0.15);
+      padding: 10px 5px 10px 5px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgb(0, 0, 0, 0.1);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #000;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #1a1a1a;
+      }
+    }
+  }
+
+  .controls {
+    display: block;
+    position: relative;
+    margin-top: 90px;
+
+    .btn-direction {
+      position: relative;
+      margin-left: 40px;
+      top: 60px;
+
+      &.btn-direction:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+        left: 30px;
+        width: 30px;
+        height: 30px;
+        background-color: #353535;
+        border-radius: 100%;
+      }
+
+      .vertical,
+      .horizontal {
+        position: absolute;
+        left: 30px;
+        width: 30px;
+        height: 90px;
+        button {
+          width: 30px;
+          height: 45px;
+          background: #444;
+          border-radius: 5px;
+          border: none;
+          &:hover {
+            background: #353535;
+          }
+        }
+      }
+
+      .horizontal {
+        transform: rotate(90deg);
+      }
+    }
+
+    .btns {
+      position: absolute;
+      top: 72px;
+      left: 252px;
+      width: 130px;
+      height: 60px;
+      background: #dfdfdf;
+      border-radius: 30px;
+      transform: rotate(-25deg);
+
+      button {
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: 9px;
+        width: 44px;
+        height: 44px;
+        background: #a93671;
+        border-radius: 100%;
+        transform: rotate(180deg);
+        border: none;
+
+        &.b {
+          right: 75px;
+        }
+      }
+    }
+  }
+}

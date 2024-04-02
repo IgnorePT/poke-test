@@ -1,0 +1,38 @@
+.pokemon-detail {
+  padding: 10px;
+  width: 100%;
+
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    background-attachment: fixed;
+    mix-blend-mode: multiply;
+  }
+
+  .type-list:not(:last-child)::after {
+    content: ', ';
+  }
+
+  .stats {
+    margin-top: 10px;
+  }
+
+  a {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border: 1px solid #000;
+    &:hover {
+      background-color: #000;
+      color: #bdae58;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+For this test you will test the integration with an API. 
+Try to implement:
+- Angular Service to perform the API calls
+
+
+1. Create a list/table of pokemons with integration with the pokemon 
+
+API (https://pokeapi.co/api/v2/pokemon-species)
+
+
+-------
+
+2. Clicking in the pokemon name will redirect to the detail of the pokemon. 
+Create a detail page of pokemon, if I refresh the link it should apear in the detail. 
+
+API (https://pokeapi.co/api/v2/pokemon-species/bulbasaur/) or (https://pokeapi.co/api/v2/pokemon-species/1/)
+
+
+3. Apply some css :)
+
+
+// Features Missing
+- Load More Pokemon
+- View more stats

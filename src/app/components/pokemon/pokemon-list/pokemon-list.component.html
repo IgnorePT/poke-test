@@ -1,0 +1,12 @@
+<h3>Choose your pokemon:</h3>
+<ul #pokemonList id="pokemonList">
+  <li
+    *ngFor="let pokemon of pokemons; let i = index"
+    [ngClass]="{ active: currentPokemonIndexSelected == i }"
+    [attr.data-index]="i"
+  >
+    <a [routerLink]="['/detail', pokemon.name]">{{
+      pokemon.name | titlecase
+    }}</a>
+  </li>
+</ul>

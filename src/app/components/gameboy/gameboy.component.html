@@ -1,0 +1,23 @@
+<div class="gameboy">
+  <div class="screen">
+    <div #innerScreen class="inner-screen">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="btn-direction">
+      <div class="vertical">
+        <button (click)="handleUp()"></button>
+        <button (click)="handleDown()"></button>
+      </div>
+      <div class="horizontal">
+        <button (click)="handleRight()"></button>
+        <button (click)="handleLeft()"></button>
+      </div>
+    </div>
+    <div class="btns">
+      <button (click)="handleButtonA()" class="a"></button>
+      <button (click)="handleButtonB()" class="b"></button>
+    </div>
+  </div>
+</div>
