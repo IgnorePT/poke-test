@@ -79,6 +79,7 @@
         width: 30px;
         height: 90px;
         button {
+          cursor: pointer;
           width: 30px;
           height: 45px;
           background: #444;
@@ -106,7 +107,7 @@
       transform: rotate(-25deg);
 
       button {
-        content: '';
+        cursor: pointer;
         position: absolute;
         top: 8px;
         right: 9px;
@@ -114,11 +115,23 @@
         height: 44px;
         background: #a93671;
         border-radius: 100%;
-        transform: rotate(180deg);
         border: none;
 
         &.b {
           right: 75px;
+
+          &::after {
+            content: 'B';
+          }
+        }
+
+        &::after {
+          font-weight: 900;
+          content: 'A';
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          color: blueviolet;
         }
       }
     }
